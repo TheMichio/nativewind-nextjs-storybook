@@ -4,7 +4,7 @@
 
 please run:
 
-`npm install`
+`yarn install`
 
 to install the pacakges.
 
@@ -12,18 +12,18 @@ to install the pacakges.
 
 To run the nextjs dev server please run:
 
-`npm run dev`
+`yarn dev`
 
 # Storybook Dev
 
 To run the storybook dev please run:
 
-`npm run storybook`
+`yarn storybook`
 
 # Storybook Build
 
 To build the storybook please run:
-`npm run build-storybook`
+`yarn build-storybook`
 
 # Storybook Preview
 
