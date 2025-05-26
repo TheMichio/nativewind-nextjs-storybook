@@ -1,36 +1,41 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# NextJS / Nativewind Storybook transpile reporuduction repo
 
-## Getting Started
+# Installation
 
-First, run the development server:
+please run:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+`npm install`
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+to install the pacakges.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+# Dev
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+To run the nextjs dev server please run:
 
-## Learn More
+`npm run dev`
 
-To learn more about Next.js, take a look at the following resources:
+# Storybook Dev
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+To run the storybook dev please run:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+`npm run storybook`
 
-## Deploy on Vercel
+# Storybook Build
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+To build the storybook please run:
+`npm run build-storybook`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# Storybook Preview
+
+To preview the storybook build please run:
+`npx http-server storybook-static`
+
+# Fixed Issue
+
+In `src/components/heading` the `Heading` component was not being transpiled correctly by Storybook. And now it's transpiled correctly.
+
+For the react-native-web setup usually these configs are needed:
+
+- aliasing react-native to react-native-web
+- forcing the use of the web version of react-native components buy usiing `.web` extensions.
+- transpiling the react-native components to be compatible with web.
